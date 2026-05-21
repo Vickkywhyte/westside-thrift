@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(npm --version)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --yes)",
+      "Bash(npx create-next-app@latest /tmp/archive-coast --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --yes)",
+      "Bash(cp -r /tmp/archive-coast/. /Users/vickkywhyte/Westside/ && ls /Users/vickkywhyte/Westside/)",
+      "Bash(npm install *)",
+      "mcp__claude_ai_Supabase__list_organizations",
+      "mcp__claude_ai_Supabase__list_projects",
+      "mcp__claude_ai_Supabase__restore_project",
+      "mcp__claude_ai_Supabase__get_project_url",
+      "mcp__claude_ai_Supabase__get_publishable_keys",
+      "mcp__claude_ai_Supabase__list_tables",
+      "mcp__claude_ai_Supabase__apply_migration",
+      "Bash(mkdir -p /Users/vickkywhyte/Westside/app/shop/\\\\[slug\\\\])",
+      "mcp__claude_ai_Supabase__execute_sql",
+      "mcp__claude_ai_Supabase__get_project",
+      "mcp__claude_ai_Supabase__list_migrations",
+      "Bash(npm run *)",
+      "Bash(node /Users/vickkywhyte/Westside/node_modules/next/dist/bin/next build)",
+      "mcp__claude_ai_Netlify__netlify-team-services-reader",
+      "mcp__claude_ai_Netlify__netlify-project-services-reader",
+      "mcp__claude_ai_Netlify__netlify-project-services-updater",
+      "mcp__claude_ai_Netlify__netlify-deploy-services-updater",
+      "Bash(netlify --version)",
+      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..d3vqmdshsVJQlleo.T8LboBXyblx_7QhzKBoegSkwOmb4QduUG4-LfkDT1NDx-zgFr8k7jTd-F3LEs3YCepCz33flXpN9RS6STZywOs64ZCDaZA4_K3n7O1HT7OnftB-3jX3CCgTogep2T4pXlbqmlx_xIa0cZcC0fFpY1AigcDCppIB1p9ix7HUHDvrtsCFVCG0lI99QRGOM0kOZ76C5kxygAoPlbGhYiiayBBjpaLvQRpsIR38BC4H2N-L4vR9mFFwGuBIvUhO5I9a7prwg_WES2_1FjbgthJmCAIoSU0seEt4mtLwLHxOYvKx5zWTH2r9V1VmBEjCTAORfOyOE9TWRbkdx7r5oovccfKQQ5IJMOEShJ59fiyU3hUbvmRzf7A.bm_jfy8RTMqQKni-cg9ZqQ\")",
+      "Bash(sed -i '' 's/Archive Coast/Westside/g; s/ARCHIVE COAST/WESTSIDE/g; s/Ojai, California/Bodija, Ibadan/g; s/Ojai studio/Ibadan studio/g; s/Curated in Ojai/Based in Ibadan/g' \\\\ *)",
+      "Bash(node node_modules/next/dist/bin/next build)",
+      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..XGgs9Dkl4yUKR877.cNsqy3ZqvMLlL-kcEaXMjTg9S3ZCXxUM2siYDCWAxcYs8et-Oktbp9niGHJsWKFqslqidHjb0hJkS987oBRWqYJ6F1gVLcNcFe7gUyw2FXNK_2ey05reqfVt_oHpINr74Jszl-wb2Iepi0UHTk80LM7D_9MKVCQC5PsEWNyUVf_qh5IFMkUBjghry2VtpZF_d8Nd8sxdG6Ta3yeIef0_c5U7EVpnWoKRkOARuIpBWmmg9mLgcZi9y_04Q7zlHUW6eQiaIyUhoMaulvOzOmfMnRHyTkOM8FadBRrtC8gi2hUXPms0ECW09Ihvy0kziX-ctv1yVWXBPRMorzcYE3VkF0uYpMHWs6N0AHv9-jsFr-RvPlP-6Q.XNaCgZjEuQaY4ne1lTX58w\")",
+      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..ElSHkWsyp7xzSsWe.YNaaO3fIE5NE0V-fTIdSGmzrwHWKmq0lg2v93vz0nbU511M5z05QAwSv5Yot-EFkM_eWZlNFHQIM43DKZmjP7wHLw4goR9uWgD5itUYvtULeR_0nCWFuyeyNgCT4bDF5gU_VX72rIqogVyfc0xuDWeqNyR5eSk63O-5z3G49r9DTbeJqpROkBUPmGwLddACTeBpBOciMXGLFAVP4EMkeYXARmgbV_Bw0EQjnsyzbp_QQ3F4pmj26vsMSh_9ais1hOPiCaKjdgPFBwVxJdEkDWu110UxKZyGi_QJFj4SHUT6a2-MgmJ9dtQTLxQwR0OjktFxs4wFxAigZRD6KwLqD7ua3Q70WBaY6qKmLXsjZKEdrXWzJ3g.AtdSLX8LTXmNnawqWPouNQ\")",
+      "WebFetch(domain:images.unsplash.com)",
+      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..k9ySrCdNYgAmw3jJ.EhbL7H780spLooASY9-tf8_1NcHHfAPIueYBrwVolEwqXuPxFVZWDNfrOWJuSNOkMw-pTfIssje6KE-dncD3zmAenGd4sducIDz3pj_rlK9T3VqnIURTNRpeAkndkJYZQwgqpffkyQFVrA4J7GdtY_uK0r32Ol8acx-Z6PerdSKuQRXJa60utMJ6Wabqx5_ryV24bf9XxuNwFyhrLCwaVfoHeMVt6Ua-YHweYTl-jWZoOAxRuDKixMGmhayXCj0GrLaSSXX-iQAb_T0TdXWUOt01szGXdiRdy2Hz0yehpdtspv2HCsa1Q-SFYt9fl3ox6mfQvKWSZtKoMwsaPbNdbJn0q60uDtfMpGnhtVrepFCcQPOVnw.LACH7cp4Fc9uK0xT0lQdEQ\")",
+      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..7u42I3Ux77WZScRA.MFF4z0wK0LbaFXHLpTstj9Hsh3JAjtH1io8EFsvAv_p4-zANXaISEa35y7Hs9U9Z85BlfcO40d9drjBbmw-k5T1H-LJntWYYcb5bXLHCY_Lx7X6p8yh-FIDCqfLDTN-OXA5izAKKhWOT7Slh2L-_C7q3lQL0xztiq1jydQ2C_y51e2QYT4Rik8-ZJo4y0Zigt_6FASYW_ksTCYbwMQnSYaCTNBE6cJ8kSEIlRU1YaZ03J-pazYozEBrUFw7tzIFifZndV2uylP3E9mC5gqY2ZcESeDcrxf1sijZJVX7BtBXSkh4HdK835tdOZglAt0z9dsv-dOd-dahWnM1mUyL6T3GMYyj-vlPxOZh9QnH800Mmrh74UA.l0ytFuwWPyQGqa4hd3RaQw\")",
+      "Bash(npm list *)",
+      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..k0KMCPnBzyVMhSdT.AUJpvht3OIT1A6EzZg0ps6ChlQjn5qexxabKl1hgWiFefbyjdWS3zPk3jzye1eQ2gzFmYV1JDkEE4bfWyWpPC2vqV7YmiJwTbvBVAR61mv86TVfoYypiowDwjWGhlaAhtYVkwcQPqDST0kFp2lhZUqPrHc79gtgAGE9Pk2WiNc-yopkFTgVeHnPgI4_Y6UtBTdul9ju0mnmKYdqe8oZgQwyfBKU9FgpWCsZhr73W5FERa9zdg-ZfFHyen4r5bqVdwkAAyHWdRp2as6gxwW5Fjejmqf5ZWS-iO8U5VN3BJSkNqHTb78wHxMAJrjDnbjj9ebU5137_qivOtGkgg3Z4P5d85UVlGok_dJbR5gnmEifEzXuQ_w.Y2INn30Jw3nuDZELKFOFpQ\")"
+    ],
+    "additionalDirectories": [
+      "/Users/vickkywhyte/Westside/app/shop",
+      "/Users/vickkywhyte/Westside/app/shop/[slug]"
+    ]
+  }
+}
