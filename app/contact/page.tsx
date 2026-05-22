@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact | Westside",
-  description: "Get in touch with the Westside team. We're based in Bodija, Ibadan.",
+  description: "Get in touch with the Westside team. We're based in Jericho, Ibadan.",
 };
 
 export default function ContactPage() {
@@ -42,7 +42,7 @@ export default function ContactPage() {
               {
                 icon: "location_on",
                 label: "Studio Address",
-                value: "Bodija, Ibadan\nOyo State, Nigeria",
+                value: "Adepate Abebi Crescent,\nIdishin, Jericho, Ibadan\nOyo State, Nigeria",
                 href: null,
                 note: "By appointment only",
               },

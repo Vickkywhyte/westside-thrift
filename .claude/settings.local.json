@@ -34,11 +34,27 @@
       "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..k9ySrCdNYgAmw3jJ.EhbL7H780spLooASY9-tf8_1NcHHfAPIueYBrwVolEwqXuPxFVZWDNfrOWJuSNOkMw-pTfIssje6KE-dncD3zmAenGd4sducIDz3pj_rlK9T3VqnIURTNRpeAkndkJYZQwgqpffkyQFVrA4J7GdtY_uK0r32Ol8acx-Z6PerdSKuQRXJa60utMJ6Wabqx5_ryV24bf9XxuNwFyhrLCwaVfoHeMVt6Ua-YHweYTl-jWZoOAxRuDKixMGmhayXCj0GrLaSSXX-iQAb_T0TdXWUOt01szGXdiRdy2Hz0yehpdtspv2HCsa1Q-SFYt9fl3ox6mfQvKWSZtKoMwsaPbNdbJn0q60uDtfMpGnhtVrepFCcQPOVnw.LACH7cp4Fc9uK0xT0lQdEQ\")",
       "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..7u42I3Ux77WZScRA.MFF4z0wK0LbaFXHLpTstj9Hsh3JAjtH1io8EFsvAv_p4-zANXaISEa35y7Hs9U9Z85BlfcO40d9drjBbmw-k5T1H-LJntWYYcb5bXLHCY_Lx7X6p8yh-FIDCqfLDTN-OXA5izAKKhWOT7Slh2L-_C7q3lQL0xztiq1jydQ2C_y51e2QYT4Rik8-ZJo4y0Zigt_6FASYW_ksTCYbwMQnSYaCTNBE6cJ8kSEIlRU1YaZ03J-pazYozEBrUFw7tzIFifZndV2uylP3E9mC5gqY2ZcESeDcrxf1sijZJVX7BtBXSkh4HdK835tdOZglAt0z9dsv-dOd-dahWnM1mUyL6T3GMYyj-vlPxOZh9QnH800Mmrh74UA.l0ytFuwWPyQGqa4hd3RaQw\")",
       "Bash(npm list *)",
-      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..k0KMCPnBzyVMhSdT.AUJpvht3OIT1A6EzZg0ps6ChlQjn5qexxabKl1hgWiFefbyjdWS3zPk3jzye1eQ2gzFmYV1JDkEE4bfWyWpPC2vqV7YmiJwTbvBVAR61mv86TVfoYypiowDwjWGhlaAhtYVkwcQPqDST0kFp2lhZUqPrHc79gtgAGE9Pk2WiNc-yopkFTgVeHnPgI4_Y6UtBTdul9ju0mnmKYdqe8oZgQwyfBKU9FgpWCsZhr73W5FERa9zdg-ZfFHyen4r5bqVdwkAAyHWdRp2as6gxwW5Fjejmqf5ZWS-iO8U5VN3BJSkNqHTb78wHxMAJrjDnbjj9ebU5137_qivOtGkgg3Z4P5d85UVlGok_dJbR5gnmEifEzXuQ_w.Y2INn30Jw3nuDZELKFOFpQ\")"
+      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..k0KMCPnBzyVMhSdT.AUJpvht3OIT1A6EzZg0ps6ChlQjn5qexxabKl1hgWiFefbyjdWS3zPk3jzye1eQ2gzFmYV1JDkEE4bfWyWpPC2vqV7YmiJwTbvBVAR61mv86TVfoYypiowDwjWGhlaAhtYVkwcQPqDST0kFp2lhZUqPrHc79gtgAGE9Pk2WiNc-yopkFTgVeHnPgI4_Y6UtBTdul9ju0mnmKYdqe8oZgQwyfBKU9FgpWCsZhr73W5FERa9zdg-ZfFHyen4r5bqVdwkAAyHWdRp2as6gxwW5Fjejmqf5ZWS-iO8U5VN3BJSkNqHTb78wHxMAJrjDnbjj9ebU5137_qivOtGkgg3Z4P5d85UVlGok_dJbR5gnmEifEzXuQ_w.Y2INn30Jw3nuDZELKFOFpQ\")",
+      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..e_2Iot_NmKDQHCy3.rT5Yelm-RUTMEk4fLs39oEeOxxB-VWwNIn4Vem5AdSqLFLxLB0rzAzbsYFiP1Iba8f_Ros33urS3dHRVC7dFDbO_qLwXQObgfBTE2Umyfits8sILVFIVrLuaP-dgtpl42gyHM8z4Jyu6Yq50oGISvLvYm8-ujwhYz-QZNeBnVOThlXyLi-36Mjd4Mu0uuL3GQVd0qXzCnzXMFjYSrer0lKDJQ__HXzTQESZZSvgPL7FxGNxptGp5J2TNVV5qvoloN3ZlVbK05PQnCfGx0ETbADFfMCXUBhpM_SPaFGhGvBw_Drzzkm2sqyBH5mVrzKAEGQ_BdXdxd9NlCCypNYTlsf5xREe_a5jy3d3IYYctleLBBhTuTQ.eprgsXng5l7_Faf7bAjS0w\")",
+      "Read(//private/tmp/**)",
+      "Read(//Users/vickkywhyte/Downloads/**)",
+      "Bash(find /var/folders -newer /var/folders/sk/rb_b04zj1q38t9qb43t7ry7r0000gn/T/com.apple.tccd -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.png\" 2>/dev/null | grep -v \".app\\\\|wallpaper\\\\|cache\\\\|Cache\\\\|Caches\" | head -20)",
+      "Read(//private/var/folders/**)",
+      "Read(//Users/vickkywhyte/Library/Caches/**)",
+      "Bash(xargs ls -t)",
+      "Bash(find ~/Desktop ~/Pictures ~/Documents -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.png\" -o -name \"*.JPG\" -o -name \"*.JPEG\" 2>/dev/null | xargs ls -t 2>/dev/null | head -15)",
+      "Read(//Users/vickkywhyte/Desktop/**)",
+      "Bash(find ~/Desktop ~/Pictures ~/Documents -type f 2>/dev/null | xargs ls -t 2>/dev/null | head -15)",
+      "Read(//Users/vickkywhyte/Pictures/**)",
+      "Bash(python3 -c \"import sys, json; [print\\(list\\(m.keys\\(\\)\\)\\) for line in sys.stdin for m in [json.loads\\(line\\)]]\")",
+      "Bash(python3 -c ' *)",
+      "Bash(ls -lh /tmp/shirt_image.jpg && cp /tmp/shirt_image.jpg /Users/vickkywhyte/Westside/public/shirt_plaid.jpg)",
+      "Bash(npx -y @netlify/mcp@latest --site-id ce8dfa7f-53da-4ea7-bf38-bde0e3a132ed --proxy-path \"https://netlify-mcp.netlify.app/proxy/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..W3ZrQWQBQYwW_PwZ.DWZE6K4t463vWlx3BYdAYT5xRZszsIFqfeCQIW0XUZRJsZsMGpJ43a-E-Qjec_GbDOehcS4EkG8o7eYIaCz-ii2CifPsqAF4iCzNW8wDg222YSU2VCKgRuI9sTLBSq3hx1wFl-9zvV81-gRCOfiDi089F62DxEfvikcpMurm6gvEuBx0OXCDZXmMnYiQs8bFSIyZcDn9ziW_sJGSpL-2FxNuAEPEMFJy9mP-inLPNbhxV7332NH_b1MNxl4Ol7RjKfdPXndEB5L08LZI66nHyfAIY0BPxg6mUnpEbQxIbEHIUHZx_AVuzGwn3SkOI5Zo7P4cFvqCBy9HQ1FrWqpzAa2zuJLk5gbfVCLxVxb2knLH0x6KFg.5enEAJiF_4HE4hIWk54qaA\")"
     ],
     "additionalDirectories": [
       "/Users/vickkywhyte/Westside/app/shop",
-      "/Users/vickkywhyte/Westside/app/shop/[slug]"
+      "/Users/vickkywhyte/Westside/app/shop/[slug]",
+      "/private/tmp"
     ]
   }
 }

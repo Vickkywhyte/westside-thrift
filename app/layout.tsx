@@ -25,7 +25,7 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "Westside — Curated Vintage Menswear",
-  description: "Hand-curated vintage clothing from the 1960s–1990s. Based in Bodija, Ibadan.",
+  description: "Hand-curated vintage clothing from the 1960s–1990s. Based in Jericho, Ibadan.",
   openGraph: {
     title: "Westside",
     description: "Curated vintage for the modern wardrobe.",

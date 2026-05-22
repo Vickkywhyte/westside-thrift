@@ -19,7 +19,7 @@ export default function ShippingPage() {
 
         <section>
           <h2 className="font-headline text-2xl font-medium text-(--color-on-surface) mb-4">Processing Time</h2>
-          <p>All orders are processed within <strong className="text-(--color-on-surface)">1–3 business days</strong> of purchase. Each item is individually inspected, professionally steamed, and carefully packaged before leaving our studio in Bodija, Ibadan.</p>
+          <p>All orders are processed within <strong className="text-(--color-on-surface)">1–3 business days</strong> of purchase. Each item is individually inspected, professionally steamed, and carefully packaged before leaving our studio in Jericho, Ibadan.</p>
         </section>
 
         <div className="border-t border-(--color-outline-variant)/30" />

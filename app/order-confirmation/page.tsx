@@ -35,7 +35,7 @@ export default async function OrderConfirmationPage({
           <ul className="flex flex-col gap-3">
             {[
               "We'll review your order and send a confirmation email within 24 hours.",
-              "Each item is professionally steamed and packaged in our Bodija studio.",
+              "Each item is professionally steamed and packaged in our Jericho studio.",
               "You'll receive a tracking number once your order ships.",
             ].map((step, i) => (
               <li key={i} className="flex gap-3 items-start">

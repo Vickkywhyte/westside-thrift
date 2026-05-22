@@ -159,7 +159,7 @@ export default async function ProductPage({ params }: Props) {
                   <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
                 </summary>
                 <div className="mt-3 font-body text-base text-(--color-on-surface-variant)">
-                  <p>Every item is hand-curated in Bodija, Ibadan and professionally steamed before shipment. Includes a certificate of authenticity and archival care guide.</p>
+                  <p>Every item is hand-curated in Jericho, Ibadan and professionally steamed before shipment. Includes a certificate of authenticity and archival care guide.</p>
                 </div>
               </details>
             </div>

@@ -2,7 +2,7 @@
 
 # Westside — Project Guide
 
-Curated vintage menswear e-commerce. Based in Bodija, Ibadan, Nigeria.
+Curated vintage menswear e-commerce. Based in Jericho, Ibadan, Nigeria.
 Live: https://archive-coast.netlify.app | Supabase project: wluauqcvwpkuxqtpuxib
 
 ---
@@ -113,7 +113,7 @@ RLS is enabled on all tables. Products are public-read. Cart/orders are user-sco
 ## Business details
 
 - **Brand**: Westside (all-caps "WESTSIDE" in the nav logo)
-- **Address**: Bodija, Ibadan, Oyo State, Nigeria
+- **Address**: Adepate Abebi Crescent, Idishin, Jericho, Ibadan, Oyo State, Nigeria
 - **Email**: hello@westside.com
 - **Phone**: +234 916 719 4813
 - **Currency**: Nigerian Naira (₦) — prices stored as `numeric(10,2)` in Supabase

@@ -18,7 +18,7 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="font-headline text-2xl font-medium text-(--color-on-surface) mb-3">Who We Are</h2>
-          <p>Westside (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is a curated vintage clothing business based in Bodija, Ibadan, Nigeria. We can be reached at <a href="mailto:hello@westside.com" className="text-(--color-primary) underline underline-offset-4">hello@westside.com</a> or <a href="tel:+2349167194813" className="text-(--color-primary) underline underline-offset-4">+234 916 719 4813</a>.</p>
+          <p>Westside (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is a curated vintage clothing business based in Jericho, Ibadan, Nigeria. We can be reached at <a href="mailto:hello@westside.com" className="text-(--color-primary) underline underline-offset-4">hello@westside.com</a> or <a href="tel:+2349167194813" className="text-(--color-primary) underline underline-offset-4">+234 916 719 4813</a>.</p>
         </section>
 
         <div className="border-t border-(--color-outline-variant)/30" />

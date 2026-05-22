@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <div className="font-headline text-2xl font-semibold text-(--color-on-surface)">WESTSIDE</div>
           <p className="font-body text-base text-(--color-on-surface-variant) leading-relaxed">
-            Curated vintage for the modern wardrobe. Based in Bodija, Ibadan.
+            Curated vintage for the modern wardrobe. Based in Jericho, Ibadan.
           </p>
         </div>
 
@@ -41,7 +41,8 @@ export default function Footer() {
         <div className="flex flex-col gap-3">
           <span className="font-label text-xs tracking-widest uppercase text-(--color-primary) mb-1">Visit</span>
           <p className="font-body text-base text-(--color-on-surface-variant)">
-            Bodija, Ibadan<br />
+            Adepate Abebi Crescent,<br />
+            Idishin, Jericho, Ibadan<br />
             Oyo State, Nigeria
           </p>
           <div className="flex flex-col gap-1 mt-2">

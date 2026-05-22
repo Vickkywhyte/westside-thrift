@@ -16,7 +16,7 @@ export default function AboutPage() {
         </div>
         <div className="relative z-10 px-4 md:px-(--spacing-margin-desktop) pb-12 max-w-(--spacing-container-max) mx-auto w-full">
           <p className="font-technical text-[12px] text-(--color-secondary-fixed) mb-3 uppercase tracking-widest">
-            Est. 2021 • Bodija, Ibadan
+            Est. 2021 • Jericho, Ibadan
           </p>
           <h1 className="font-display text-[42px] md:text-[56px] font-semibold text-(--color-surface-bright) leading-none tracking-tight">
             One vision. <br />
@@ -68,7 +68,7 @@ export default function AboutPage() {
             { icon: "eco", title: "Sustainable", body: "Extending the lifecycle of existing garments is the purest form of environmentalism. No new production, just new lives." },
             { icon: "sell", title: "Affordable", body: "Great vintage shouldn't be gatekept. We keep our margins honest so authentic pieces stay accessible to everyone." },
             { icon: "verified", title: "Honest", body: "Full transparency on condition. If it has a pinhole or a faint stain, we'll show you. Character is honesty." },
-            { icon: "location_on", title: "Local", body: "Rooted in Bodija, Ibadan. We support our community at every step and source thoughtfully across Nigeria." },
+            { icon: "location_on", title: "Local", body: "Rooted in Jericho, Ibadan. We support our community at every step and source thoughtfully across Nigeria." },
           ].map(({ icon, title, body }) => (
             <div
               key={title}
