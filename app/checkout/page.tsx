@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { createClient } from "@/lib/supabase/client";
@@ -35,8 +36,22 @@ function CheckoutForm({ entries, subtotal }: { entries: CartEntry[]; subtotal: n
   const stripe = useStripe();
   const elements = useElements();
   const [address, setAddress] = useState<ShippingAddress>(INITIAL_ADDRESS);
+  const [guestEmail, setGuestEmail] = useState("");
+  const [userId, setUserId] = useState<string | null>(null);
+  const [userEmail, setUserEmail] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  // Check auth state on mount — guest checkout allowed if not logged in
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (user) {
+        setUserId(user.id);
+        setUserEmail(user.email ?? null);
+      }
+    });
+  }, []);
 
   const set = (field: keyof ShippingAddress) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setAddress((a) => ({ ...a, [field]: e.target.value }));
@@ -49,14 +64,6 @@ function CheckoutForm({ entries, subtotal }: { entries: CartEntry[]; subtotal: n
     if (!stripe || !elements) {
       setError("Payment provider not loaded. Please refresh.");
       setLoading(false);
-      return;
-    }
-
-    const supabase = createClient();
-    const { data: { user } } = await supabase.auth.getUser();
-
-    if (!user) {
-      router.push("/auth/login?redirect=/checkout");
       return;
     }
 
@@ -73,7 +80,7 @@ function CheckoutForm({ entries, subtotal }: { entries: CartEntry[]; subtotal: n
       return;
     }
 
-    // Step 1: create PaymentIntent on the server
+    // Step 1: create PaymentIntent
     const piRes = await fetch("/api/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -87,7 +94,7 @@ function CheckoutForm({ entries, subtotal }: { entries: CartEntry[]; subtotal: n
       return;
     }
 
-    // Step 2: confirm card payment — this actually charges the card
+    // Step 2: charge the card
     const { error: confirmError } = await stripe.confirmCardPayment(piData.clientSecret, {
       payment_method: {
         card: cardElement,
@@ -101,37 +108,50 @@ function CheckoutForm({ entries, subtotal }: { entries: CartEntry[]; subtotal: n
       return;
     }
 
-    // Step 3: save order to Supabase with the PaymentIntent ID
-    const { data: order, error: orderErr } = await supabase
-      .from("orders")
-      .insert({
-        user_id: user.id,
+    // Step 3: save order via server-side route (handles both guest + authed, fixes RLS)
+    const orderRes = await fetch("/api/create-order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId: userId ?? null,
+        items: entries.map(({ product, quantity }) => ({
+          productId: product.id,
+          quantity,
+          price: product.price,
+        })),
         total: subtotal,
-        shipping_address: address,
-        status: "pending",
-        stripe_payment_intent_id: piData.paymentIntentId,
-      })
-      .select()
-      .single();
+        shippingAddress: address,
+        stripePaymentIntentId: piData.paymentIntentId,
+      }),
+    });
+    const orderData = await orderRes.json();
 
-    if (orderErr || !order) {
-      setError("Payment succeeded but order save failed. Please contact hello@westside.com with your payment reference.");
+    if (!orderRes.ok || !orderData.orderId) {
+      setError("Payment succeeded but order save failed. Please contact hello@westside.com with your payment reference: " + piData.paymentIntentId);
       setLoading(false);
       return;
     }
 
-    const items = entries.map(({ product, quantity }) => ({
-      order_id: order.id,
-      product_id: product.id,
-      quantity,
-      price_at_purchase: product.price,
-    }));
+    // Step 4: notify admin — fire-and-forget
+    fetch("/api/notify-order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        orderId: orderData.orderId,
+        items: entries.map(({ product, quantity }) => ({
+          name: product.name,
+          quantity,
+          price: product.price,
+        })),
+        total: subtotal,
+        address,
+        customerEmail: userEmail ?? guestEmail,
+      }),
+    }).catch(() => {});
 
-    await supabase.from("order_items").insert(items);
     localStorage.removeItem("cart");
     window.dispatchEvent(new Event("cart-updated"));
-
-    router.push(`/order-confirmation?order=${order.id}`);
+    router.push(`/order-confirmation?order=${orderData.orderId}`);
   };
 
   return (
@@ -139,6 +159,41 @@ function CheckoutForm({ entries, subtotal }: { entries: CartEntry[]; subtotal: n
       {error && (
         <div className="bg-(--color-error-container) text-(--color-on-error-container) font-technical text-[12px] p-4">
           {error}
+        </div>
+      )}
+
+      {/* Guest banner — shown only when not logged in */}
+      {!userId && (
+        <div className="flex items-center justify-between gap-4 border border-(--color-outline-variant)/40 bg-(--color-surface-container-low) px-5 py-4">
+          <p className="font-technical text-[11px] text-(--color-on-surface-variant) tracking-wide">
+            Checking out as guest
+          </p>
+          <Link
+            href="/auth/login?redirect=/checkout"
+            className="font-label text-[10px] tracking-widest uppercase text-(--color-primary) border-b border-(--color-primary) pb-0.5 hover:opacity-60 transition-opacity shrink-0"
+          >
+            Sign in instead
+          </Link>
+        </div>
+      )}
+
+      {/* Contact — guests only */}
+      {!userId && (
+        <div>
+          <h2 className="font-label text-xs tracking-widest uppercase text-(--color-primary) mb-6">Contact</h2>
+          <div className="flex flex-col gap-2">
+            <label className="font-label text-xs tracking-widest uppercase text-(--color-on-surface-variant)">Email</label>
+            <input
+              type="email"
+              value={guestEmail}
+              onChange={(e) => setGuestEmail(e.target.value)}
+              required
+              autoComplete="email"
+              placeholder="your@email.com"
+              className="border border-(--color-outline-variant) bg-white px-4 py-3 font-body text-base focus:outline-none focus:border-(--color-primary) transition-colors"
+            />
+            <p className="font-technical text-[11px] text-(--color-on-surface-variant)/60">Order confirmation will be sent here.</p>
+          </div>
         </div>
       )}
 

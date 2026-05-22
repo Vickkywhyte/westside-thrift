@@ -160,6 +160,25 @@ Publishable key is in `app/checkout/page.tsx` — test key `pk_test_51TZBFM...`.
 | `STRIPE_SECRET_KEY` | Stripe Dashboard → Developers → API keys → Secret key (`sk_test_...`) |
 | `STRIPE_WEBHOOK_SECRET` | Stripe Dashboard → Developers → Webhooks → signing secret (`whsec_...`) |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase Dashboard → Project Settings → API → service_role key |
+| `RESEND_API_KEY` | Resend Dashboard → API Keys |
+
+---
+
+## Order notification emails (Resend)
+
+When a customer completes checkout, the client fires a fire-and-forget POST to `/api/notify-order`. This never blocks the checkout redirect — errors are swallowed silently.
+
+### API route
+`app/api/notify-order/route.ts` — receives `{ orderId, items, total, address, customerEmail }`, sends a branded HTML email via Resend.
+
+### Email details
+- **From**: `orders@westside.com` (must be a verified domain in Resend)
+- **To**: `victorthesis80@gmail.com`
+- **Subject**: `New Order #XXXXXXXX — ₦xx,xxx`
+- Email includes: order ID, itemised list, total, shipping address, customer email, link to Supabase dashboard
+
+### Required env var
+`RESEND_API_KEY` — set in Netlify. The sender domain (`westside.com`) must be verified in Resend's dashboard. If using an unverified domain, change `from` to `onboarding@resend.dev` temporarily.
 
 ### Registering the webhook in Stripe
 1. Go to [Stripe Dashboard → Developers → Webhooks](https://dashboard.stripe.com/test/webhooks)
